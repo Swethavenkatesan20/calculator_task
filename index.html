@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body {
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* Text color */
+    font-family: Arial, sans-serif; /* Font family */
+  }
+
+  .calculator {
+    width: 300px;
+    margin: 50px auto;
+  }
+
+  .btn {
+    font-size: 24px; /* Larger font size for buttons */
+  }
+
+   .btn-secondary, .btn-outline-secondary {
+    width: 75px; /* Larger button width */
+    height: 75px; /* Larger button height */
+  }
+  .clear{
+    width: 150px;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="calculator container ">
+  <input type="text" id="display" class="form-control mb-2" readonly>
+  <div class="row">
+    <div class="col-3"><button class="border btn btn-secondary btn-block" onclick="appendToDisplay('7')">7</button></div>
+    <div class="col-3"><button class="border btn btn-secondary btn-block" onclick="appendToDisplay('8')">8</button></div>
+    <div class="col-3"><button class="border btn btn-secondary btn-block" onclick="appendToDisplay('9')">9</button></div>
+    <div class="col-3"><button class="border btn btn-outline-secondary btn-block" onclick="clearDisplay()">C</button></div>
+  </div>
+  <div class="row">
+    <div class="col-3"><button class="border btn btn-secondary btn-block" onclick="appendToDisplay('4')">4</button></div>
+    <div class="col-3"><button class="border btn btn-secondary btn-block" onclick="appendToDisplay('5')">5</button></div>
+    <div class="col-3"><button class="border btn btn-secondary btn-block" onclick="appendToDisplay('6')">6</button></div>
+    <div class="col-3"><button class="border btn btn-outline-secondary btn-block" onclick="appendToDisplay('+')">+</button></div>
+  </div>
+  <div class="row">
+    <div class="col-3"><button class="border btn btn-secondary btn-block" onclick="appendToDisplay('1')">1</button></div>
+    <div class="col-3"><button class="border btn btn-secondary btn-block" onclick="appendToDisplay('2')">2</button></div>
+    <div class="col-3"><button class="border btn btn-secondary btn-block" onclick="appendToDisplay('3')">3</button></div>
+    <div class="col-3"><button class="border btn btn-outline-secondary" onclick="appendToDisplay('-')">-</button></div>
+  </div>
+  <div class="row">
+    <div class="col-3"><button class="border btn btn-secondary btn-block" onclick="appendToDisplay('0')">0</button></div>
+    <div class="col-3"><button class="border btn btn-outline-secondary btn-block" onclick="appendToDisplay('.')">.</button></div>
+    <div class="col-3"><button class="border btn btn-outline-secondary btn-block" onclick="calculate()">=</button></div>
+    <div class="col-3"><button class="border btn btn-outline-secondary btn-block" onclick="appendToDisplay('*')">x</button></div>
+  </div>
+  <div class="row">
+    <div class="col-3"><button class="border btn btn-outline-secondary btn-block" onclick="appendToDisplay('/')">/</button></div>
+    <div class="col-3"><button class="border btn btn-outline-secondary btn-block" onclick="appendToDisplay('%')">%</button></div>
+    <div class="col-6"><button class="border clear btn btn-outline-secondary btn-block" onclick="clearMemory()">Clear</button></div>
+  </div>
+</div>
+
+<script src="calculator.js"></script>
+
+</body>
+</html>
